@@ -1,0 +1,25 @@
+class Solution:
+    # @param A : tuple of integers
+    # @param B : integer
+    # @return an integer
+    def search(self, A, B):
+        start = 0
+        end = len(A)-1
+        while (start <= end):
+            mid = (start+end)//2
+            if A[mid]==B:
+                return mid
+            if A[start]<=A[mid]:
+                if A[start]<= B<= A[mid]:
+                end = mid-1
+                else:
+                start = mid+1
+            if A[mid]<=A[end]:
+                if A[mid]<=B<= A[end]:
+                    start = mid+1
+                else:
+                    end = mid-1
+                    
+                    
+           
+        return -1
