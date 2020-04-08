@@ -1,0 +1,32 @@
+class Solution:
+    # @param A : tuple of integers
+    # @return a list of integers
+    def repeatedNumber(self, A):
+        n = len(A)
+        if n!=0:
+            sumN = (n*(n+1))/2
+        sum1 = 0
+        sum2 = 0
+        for i in (0,len(A)-1):
+            sum1 += sum1+A[i];
+            
+        b_minus_a= sumN-sum1
+        sumN2 = (n*(n+1)*((2*n)+1))/6
+        for i in (0,len(A)-1):
+            sum2 += sum2+A[i]*A[i];
+            
+        sumN = (n*(n+1))/2
+        sum1 = 0
+        sum2 = 0
+        for i in (0,len(A)-1):
+            sum1 += sum1+A[i];
+            
+        b_minus_a= sumN-sum1
+        sumN2 = (n*(n+1)*((2*n)+1))/6
+        for i in (0,len(A)-1):
+            sum2 += sum2+A[i]*A[i];
+        if b_minus_a !=0:
+            b_plus_a = (sumN2-sum2)/(b_minus_a)
+        else:
+            return b_minus_a
+            
