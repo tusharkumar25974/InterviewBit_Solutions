@@ -1,0 +1,70 @@
+
+'''class Solution:
+    # @param A : integer
+    # @return an integer
+    def sqrt(self, A):
+        if(A==0 or A==1):
+            return A
+        start = 0
+        end  = A
+        while(start<=A):
+            mid = start + (end-start)//2
+            sq_mid = mid**2
+            if sq_mid == A:
+                return mid
+            elif sq_mid<A:
+                if (mid+1)**2 > A:
+                    return mid
+                else:
+                    start = mid+1
+            else:
+                end = mid-1
+        
+                
+                
+                 if (mid + 1) ** 2 > A:
+                    return mid
+                low = mid + 1
+            else:
+                high = mid - 1
+            
+    
+    
+    
+    
+    
+    
+    
+       def sqrt(self, A):
+        if (A == 0 or A==1):
+            return A
+        i = 1 
+        result = 1
+        while(result<=A):
+            i+=1
+            result = i*i
+        return i-1
+        '''
+        
+class Solution:
+    # @param A : integer
+    # @return an integer
+    def sqrt(self, A):
+        low, high = 0, A
+
+        while low <= high:
+            mid = low + (high - low) // 2
+
+            sq_mid = mid ** 2
+
+            if sq_mid == A:
+                return mid
+            elif sq_mid < A:
+                if (mid + 1) ** 2 > A:
+                    return mid
+                low = mid + 1
+            else:
+                high = mid - 1
+        
+        
+        
