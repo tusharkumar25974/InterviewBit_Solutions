@@ -1,0 +1,21 @@
+class Solution:
+    # @param A : list of integers
+    # @return a list of integers
+    def maxset(self, A):
+        
+        
+    # Find out which are the element and its index which is negative
+    # then we have to break once we reach that element
+        x = 0
+        if A[0]<0:
+            return
+        else:
+            for i in range(len(A)):
+                    if A[i]<0:
+                    print(A[x:i])
+            x = i+1
+            #what if 1st element is itself negative
+        #now 
+        
+    result = maxset(self,A)
+            
