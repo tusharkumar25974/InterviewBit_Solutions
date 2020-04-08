@@ -1,0 +1,12 @@
+class Solution:
+    # @param A : list of integers
+    # @return a list of integers
+    def plusOne(self,A):
+        _data=""
+        for i in A:
+            _data+=str(i)
+        n = int(_data)+1
+        L=[]
+        for i in str(n):
+            L.append(int(i))
+            return(L)
