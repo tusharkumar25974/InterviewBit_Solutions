@@ -1,0 +1,15 @@
+class Solution:
+   
+        
+    # @param A : integer
+    # @return an integer
+      
+    def numSetBits(self, A):
+        
+            
+        A = bin(A)[2:]
+        count = 0
+        for i in A:
+            
+            if i == '1':
+                count+=1
