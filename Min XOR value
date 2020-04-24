@@ -1,0 +1,8 @@
+class Solution:
+    # @param A : list of integers
+    # @return an integer
+    def findMinXor(self, A):
+        A.sort()
+        return min(map(lambda i: A[i] ^ A[i + 1], range(len(A) - 1)))
+# map is to apply a fun to an iterable
+#lambda is to take some arguments and give out ex[pression]
