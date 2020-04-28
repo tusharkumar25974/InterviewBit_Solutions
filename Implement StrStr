@@ -1,0 +1,46 @@
+class Solution:
+    # @param A : string
+    # @param B : string
+    # @return an integer
+    def strStr(self, A, B):
+        try:
+            return A.index(B)
+        except:
+            return -1
+
+'''
+class Solution:
+    def strStr(self,A,B):
+        return A.find(B)
+
+class Solution:
+    # @param A : string
+    # @param B : string
+    # @return an integer
+    def strStr(self, A, B):
+        return A.find(B)
+
+class Solution:
+    def strStr(self,A,B):
+        return A.find(B)
+        if A in B:
+            return A.find(B)
+        else:
+            return -1
+           
+
+
+
+
+class Solution:
+    # @param A : string
+    # @param B : string
+    # @return an integer
+    def strStr(self, A, B):
+        import re
+        a = re.search(B,A)
+        return a.start() if a else -1
+        
+        
+        
+'''
