@@ -1,0 +1,17 @@
+class Solution:
+    # @param A : integer
+    # @return an integer
+    def climbStairs(self, A):
+        if A<2:
+            return A
+            
+        ways = [0]*A
+        ways[0],ways[1] = 1,2
+        
+        for i in range(2,A):
+            ways[i]=ways[i-1]+ways[i-2]
+        
+        return ways[-1]
+        
+        
+        
