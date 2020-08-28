@@ -1,0 +1,30 @@
+class Solution:
+    # @param A : list of integers
+    # @param B : integer
+    # @return an integer
+    def threeSumClosest(self, A, B):
+        A.sort()
+        x = float('INF')
+        summ = -1
+        n = len(A)
+        for i in range(0,n-2):
+            a = A[i]
+            l = i+1
+            r = n-1
+            while l < r:
+                b = A[l]
+                c = A[r]
+                if abs(B - (a + b + c)) < x:
+                    x = abs(B - (a + b + c))
+                #x = min(x,abs(B-(a+b+c)))
+                    summ = a+b+c
+                
+                if a+b+c == B:
+                    return B
+                elif a+b+c > B:
+                    r-=1
+                else:
+                    l+=1
+        return summ
+                    
+                
