@@ -1,0 +1,12 @@
+class Solution:
+    # @param A : root node of tree
+    # @return an integer
+    def maxDepth(self, A):
+        if not A.left and not A.right:
+            return 1
+        if A.right and A.left:
+            return max(self.maxDepth(A.left),self.maxDepth(A.right))+1
+        if A.left:
+            return self.maxDepth(A.left) + 1
+        if A.right:
+            return self.maxDepth(A.right) + 1
