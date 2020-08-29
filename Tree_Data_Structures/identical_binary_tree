@@ -1,0 +1,16 @@
+class Solution:
+    # @param A : root node of tree
+    # @param B : root node of tree
+    # @return an integer
+    def isSame(self, A,B):
+        s = int(not A) + int(not B)
+        if s==2:
+            return True
+        elif s==1:
+            return False
+        else:
+            return self.isSame(A.left,B.left) and self.isSame(A.right,B.right) and A.val==B.val
+            
+        
+    def isSameTree(self, C, D):
+        return int(self.isSame(C,D))
