@@ -1,0 +1,32 @@
+class Solution:
+    # @param A : root node of tree
+    # @return an integer
+    def isSymm(self,A,B):
+        if not A and not B:
+            return True
+        elif (not A and B) or (A and not B):
+            return False
+        if A.val == B.val:
+            return self.isSymm(A.left, B.right) and self.isSymm(A.right, B.left)
+        return False
+    def isSymmetric(self,A):
+        if not A:
+            return 1
+        return int(self.isSymm(A.left,A.right))
+        
+        
+        
+class Solution:
+    # @param A : root node of tree
+    # @return an integer
+    def isMirror(self,root1,root2):
+        if root1 == None and root2 == None:
+            return 1
+        if (root1 != None and root2 != None):
+            if root1.val == root2.val:
+                return(self.isMirror(root1.left,root2.right)and self.isMirror(root1.right,root2.left))
+        return 0        
+    def isSymmetric(self, A):
+        return self.isMirror(A,A)
+     
+        
